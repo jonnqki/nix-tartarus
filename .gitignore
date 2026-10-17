@@ -1,0 +1,7 @@
+# Nix build artifacts
+result
+result-*
+
+# Editor/OS cruft
+*.swp
+.DS_Store

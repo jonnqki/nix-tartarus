@@ -1,0 +1,549 @@
+config_version = 8
+
+[accessibility]
+ui_scale = 1.1500000096857548
+
+[audio]
+enable_overdrive = true
+
+[bar]
+order = [ "default", "test", "barszddcszcx" ]
+
+    [bar.barszddcszcx]
+    enabled = false
+    margin_ends = 35
+    thickness = 105
+
+    [bar.default]
+    background_opacity = 0.64999998547136784
+    border = "surface"
+    border_width = 1.0
+    capsule = true
+    center = [ "clock", "weather", "launcher_2" ]
+    end = [
+        "media",
+        "tray",
+        "notifications",
+        "clipboard",
+        "network",
+        "volume",
+        "brightness",
+        "battery",
+        "control-center",
+        "session"
+    ]
+    font_family = "Noto Sans"
+    font_weight = 700
+    layer = "top"
+    margin_ends = 30
+    padding = 10
+    smart_auto_hide = true
+    start = [ "launcher", "wallpaper", "workspaces", "keybinds", "nix-monitor", "audio_visualizer", "widget", "widget_2" ]
+    thickness = 35
+
+        [bar.default.dead_zone.actions]
+        left = "bar-toggle"
+
+        [bar.default.monitor.HDMI-A-1]
+        position = "right"
+        thickness = 30
+
+    [bar.test]
+    border = "on_primary"
+    border_width = 2.5
+    center = [ "clock", "ram" ]
+    enabled = false
+    end = [
+        "media",
+        "tray",
+        "notifications",
+        "clipboard",
+        "bluetooth",
+        "volume",
+        "brightness",
+        "battery",
+        "control-center",
+        "session"
+    ]
+    font_family = "Fixed"
+    font_weight = 300
+    margin_ends = 70
+    padding = 15
+    panel_overlap = 0
+    position = "right"
+    radius = 28
+    radius_bottom_left = 63
+    radius_bottom_right = 45
+    radius_top_left = 65
+    scale = 1.5000000149011612
+    start = [ "launcher", "wallpaper", "network", "workspaces" ]
+    thickness = 46
+    widget_spacing = 22
+
+[brightness]
+enable_ddcutil = true
+minimum_brightness = 0.99999997764825821
+
+[calendar]
+enabled = true
+
+[desktop_widgets]
+schema_version = 2
+widget_order = [ "desktop-widget-0000000000000001", "desktop-widget-0000000000000002" ]
+
+    [desktop_widgets.grid]
+    cell_size = 32
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000001]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 170.0
+    cy = 135.19999694824219
+    output = "DP-1"
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+        background = false
+        bands = 32
+        color_2 = "on_secondary"
+        show_when_idle = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000002]
+    box_height = 96.0
+    box_width = 96.0
+    cx = 304.0
+    cy = 135.19999694824219
+    output = "DP-1"
+    rotation = 0.0
+    type = "fancy_audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
+        background = false
+        bloom_intensity = 0.80000000000000004
+        inner_diameter = 0.0
+        rotation_speed = 0.60000000000000009
+        secondary_color = "on_secondary"
+        sensitivity = 1.9000000000000001
+        visualization_mode = "all"
+        wave_thickness = 1.2
+
+[dock]
+active_monitor_only = true
+smart_auto_hide = true
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 400.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = false
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 400.0
+
+[location]
+address = "Devon"
+auto_locate = true
+
+[lockscreen]
+blurred_desktop = true
+monitors = [ "HDMI-A-1", "DP-1" ]
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@winit",
+    "lockscreen-login-box@DP-1",
+    "lockscreen-login-box@HDMI-A-1",
+    "lockscreen-widget-0000000000000001",
+    "lockscreen-widget-0000000000000002",
+    "lockscreen-widget-0000000000000003",
+    "lockscreen-widget-0000000000000004"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 103.0
+    box_width = 400.0
+    cx = 1317.0
+    cy = 1261.5
+    output = "DP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "primary"
+        background_opacity = 0.17000000000000001
+        background_radius = 12.0
+        center_password_text = true
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "compact"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 103.0
+    box_width = 400.0
+    cx = 904.0
+    cy = 888.5
+    output = "HDMI-A-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "primary"
+        background_opacity = 0.23999999999999999
+        background_radius = 12.0
+        center_password_text = true
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "compact"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@winit"]
+    box_height = 229.0
+    box_width = 810.0
+    cx = 627.0
+    cy = 1172.5
+    output = "winit"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@winit".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 1715.0
+    cy = 102.0
+    output = "HDMI-A-1"
+    rotation = 0.0
+    type = "media_player"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background_opacity = 0.0
+        background_padding = 8
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 128.0
+    cy = 80.0
+    output = "HDMI-A-1"
+    rotation = 0.0
+    type = "weather"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
+        background_opacity = 0.0
+        font_family = "Noto Sans Lao Looped"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 132.0
+    cy = 94.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "weather"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
+        background_opacity = 0.0
+        font_family = "Noto Sans Lao Looped"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000004]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 2303.0
+    cy = 132.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "media_player"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
+        background_opacity = 0.0
+        background_padding = 8
+
+[nightlight]
+enabled = true
+temperature_day = 5800
+
+[notification]
+history_retention_hours = 1
+
+[osd]
+background_opacity = 0.99999997764825821
+
+[plugin_settings."avivbintangaringga/nix-monitor"]
+branch = "nixos-26.05"
+show_update_available_notification = false
+update_check_interval = 61
+
+[plugin_settings."kenn/keybind-cheatsheet"]
+compositor = "niri"
+show_actions = true
+
+[plugins]
+enabled = [
+    "avivbintangaringga/nix-monitor",
+    "tadomika_ari/config-swap",
+    "kenn/keybind-cheatsheet",
+    "noctalia/translator",
+    "oldirtty/color_picker",
+    "alexander/game-launcher",
+    "mdj2812/mihomo-control",
+    "imjustdoingmypart/niri-animations",
+    "salemsayed/niri-active-workspace"
+]
+
+[shell]
+avatar_path = "/home/jonathan/Downloads/IMG_2817.jpg"
+font_family = "JetBrainsMono NFM"
+niri_overview_type_to_launch_enabled = true
+panel_anchor_bar = "default"
+password_style = "random"
+polkit_agent = true
+screen_time_enabled = true
+telemetry_enabled = true
+
+    [shell.launcher]
+    compact = true
+
+    [shell.panel]
+    transparency_mode = "glass"
+
+    [[shell.session.actions]]
+    action = "lock"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "1"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "logout"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "2"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "lock_and_suspend"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "3"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "4"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "5"
+    variant = "destructive"
+
+    [[shell.session.actions]]
+    action = "command"
+    command = "notify-send 'Noctalia' 'Custom session entry'"
+    countdown_seconds = 0.0
+    enabled = false
+    variant = "default"
+
+[theme]
+builtin = "Ayu"
+community_palette = "Atuel"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-content"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "ghostty", "niri", "qt" ]
+    community_ids = [ "zen-browser", "telegram", "steam", "fastfetch", "obs" ]
+
+[wallpaper]
+directory = "/home/jonathan/Pictures/Wallpapers"
+transition_on_startup = true
+
+    [wallpaper.default]
+    path = "/home/jonathan/Pictures/Wallpapers/Black-white-girl.png"
+
+    [wallpaper.last]
+    path = "/home/jonathan/Pictures/Wallpapers/Black-white-girl.png"
+
+    [wallpaper.monitors.DP-1]
+    path = "/home/jonathan/Pictures/Wallpapers/Black-white-girl.png"
+
+    [wallpaper.monitors.HDMI-A-1]
+    path = "/home/jonathan/Pictures/Wallpapers/Black-white-girl.png"
+
+    [[wallpaper.favorite]]
+    path = "/home/jonathan/Pictures/Wallpapers/EVA-Ayanami.png"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/jonathan/Pictures/Wallpapers/NIX-OS-CHAN-SKETCH.png"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/jonathan/Pictures/Wallpapers/ZATO.....jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/jonathan/Pictures/Wallpapers/MW3-OPS-gun.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/jonathan/Pictures/Wallpapers/HU-TAO-ZHONGLI.png"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/jonathan/Pictures/Wallpapers/Grey-Nix-os.png"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    builtin_palette = "Catppuccin"
+    palette_source = "builtin"
+    path = "/home/jonathan/Pictures/Wallpapers/Nix-osBlue.png"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/jonathan/Pictures/Wallpapers/Black-Anime.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/jonathan/Pictures/Wallpapers/pink cute1.jpg"
+    theme_mode = "dark"
+    wallpaper_scheme = "m3-content"
+
+    [[wallpaper.favorite]]
+    builtin_palette = "Ayu"
+    palette_source = "builtin"
+    path = "/home/jonathan/Pictures/Wallpapers/p3 pink.jpg"
+    theme_mode = "dark"
+
+    [[wallpaper.favorite]]
+    path = "/home/jonathan/Pictures/Wallpapers/Fantasy-Landscape3.png"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/jonathan/Pictures/Wallpapers/pink nateure1.png"
+    theme_mode = "auto"
+    wallpaper_scheme = "m3-tonal-spot"
+
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/jonathan/Pictures/Wallpapers/Makima-Red.png"
+    theme_mode = "dark"
+    wallpaper_scheme = "m3-content"
+
+    [[wallpaper.favorite]]
+    path = "/home/jonathan/Pictures/Wallpapers/Ada-castle.png"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/jonathan/Pictures/Wallpapers/Sewerslvt.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/jonathan/Pictures/Wallpapers/Frieren.png"
+    theme_mode = "auto"
+
+[widget.audio_visualizer]
+bands = 10
+capsule = true
+capsule_opacity = 0.88
+capsule_padding = 27
+capsule_radius = "auto"
+color_2 = "secondary"
+interactive = false
+scale = 0.69999999999999996
+width = 93
+
+[widget.battery]
+device = "/org/freedesktop/UPower/devices/battery_ps_controller_battery_4cob9o9bo38o19ofb"
+hide_when_full = true
+hide_when_plugged = true
+
+[widget.keybinds]
+type = "kenn/keybind-cheatsheet:keybinds"
+
+[widget.launcher_2]
+anchor = true
+type = "alexander/game-launcher:launcher"
+
+[widget.network]
+icon_color = "primary"
+scale = 0.94999999999999996
+show_vpn_label = true
+vpn_status = "both"
+
+[widget.nix-monitor]
+show_text = false
+type = "avivbintangaringga/nix-monitor:nix-monitor"
+
+[widget.ram]
+color = "primary"
+display = "graph"
+icon_color = "secondary"
+label_min_width = 16
+scale = 0.65000000000000002
+
+[widget.tray]
+drawer = true
+drawer_item_size = 14.0
+scale = 0.65000000000000002
+
+[widget.volume]
+font_family = "JetBrainsMonoNL Nerd Font"
+mute_color = "on_error"
+
+[widget.widget]
+type = "tadomika_ari/config-swap:widget"
+
+[widget.widget_2]
+type = "oldirtty/color_picker:widget"

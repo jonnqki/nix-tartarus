@@ -1,0 +1,4 @@
+# empty_pattern:  `{ ... }:` is the idiomatic NixOS module header, not a smell.
+# repeated_keys:  writing `services.a.enable` / `services.b.enable` on separate
+#                 lines is standard NixOS style and reads better than collapsing.
+disabled = ["empty_pattern", "repeated_keys"]

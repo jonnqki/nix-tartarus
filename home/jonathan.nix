@@ -1,14 +1,20 @@
-#   (A) Native HM module   
+#   (A) Native HM module
 #   (B) Verbatim, read-only
-#   (C) Verbatim, WRITABLE  
+#   (C) Verbatim, WRITABLE
 
-
-{ pkgs, config, lib, inputs, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  inputs,
+  ...
+}:
 
 let
   # Absolute path to this repo's dotfiles on the live machine, for pattern (C).
   repoDots = "${config.home.homeDirectory}/nixos-config/home/dotfiles";
-in {
+in
+{
   imports = [ inputs.spicetify-nix.homeManagerModules.default ];
 
   home.username = "jonathan";
@@ -16,7 +22,10 @@ in {
   home.stateVersion = "26.05";
   programs.home-manager.enable = true;
 
-  home.sessionPath = [ "$HOME/.local/bin" "$HOME/.spicetify" ];
+  home.sessionPath = [
+    "$HOME/.local/bin"
+    "$HOME/.spicetify"
+  ];
 
   # ======================================================== (A) ==================================================
 
@@ -40,10 +49,15 @@ in {
     oh-my-zsh = {
       enable = true;
       theme = "agnoster";
-      plugins = [ "git" "sudo" "history" ];
+      plugins = [
+        "git"
+        "sudo"
+        "history"
+      ];
     };
     shellAliases = {
       clipsls = "ls -la /mnt/backup/clips /mnt/backup/clips/converted";
+      list = "ls -al";
     };
     initContent = ''
       export DEFAULT_USER="jonathan"
@@ -53,33 +67,36 @@ in {
     '';
   };
 
-  programs.spicetify = {
-    enable = true;
-    theme = inputs.spicetify-nix.legacyPackages.${pkgs.system}.themes.comfy;
-    colorScheme = "Comfy";
-    enabledExtensions = with inputs.spicetify-nix.legacyPackages.${pkgs.system}.extensions; [
-      adblock
-      shuffle
-      {
-        src = ./dotfiles/spicetify;
-        name = "lyrics-translate.js";
-      }
-    ];
-  };
+  programs.spicetify =
+    let
+      spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+    in
+    {
+      enable = true;
+      theme = spicePkgs.themes.comfy;
+      colorScheme = "Comfy";
+      enabledExtensions = with spicePkgs.extensions; [
+        adblock
+        shuffle
+        {
+          src = ./dotfiles/spicetify;
+          name = "lyrics-translate.js";
+        }
+      ];
+    };
 
   # ================================================ (B) ============================================
-  # Hand-written configs 
+  # Hand-written configs
   xdg.configFile = {
-    "niri/config.kdl".source        = ./dotfiles/niri/config.kdl;
+    "niri/config.kdl".source = ./dotfiles/niri/config.kdl;
     "fastfetch/config.jsonc".source = ./dotfiles/fastfetch/config.jsonc;
-    "waypaper/config.ini".source    = ./dotfiles/waypaper/config.ini;
+    "waypaper/config.ini".source = ./dotfiles/waypaper/config.ini;
 
     # ============== (C) (Vesktop needs to be writable because of changes manually) =================
     # Vesktop rewrites these when you change settings in-app
     "vesktop/settings.json".source =
       config.lib.file.mkOutOfStoreSymlink "${repoDots}/vesktop/settings.json";
-    "vesktop/state.json".source =
-      config.lib.file.mkOutOfStoreSymlink "${repoDots}/vesktop/state.json";
+    "vesktop/state.json".source = config.lib.file.mkOutOfStoreSymlink "${repoDots}/vesktop/state.json";
     "vesktop/settings/settings.json".source =
       config.lib.file.mkOutOfStoreSymlink "${repoDots}/vesktop/settings/settings.json";
     "vesktop/settings/native-settings.json".source =

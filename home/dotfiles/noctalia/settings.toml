@@ -1,4 +1,4 @@
-config_version = 8
+config_version = 15
 
 [accessibility]
 ui_scale = 1.1500000096857548
@@ -102,6 +102,8 @@ widget_order = [ "desktop-widget-0000000000000001", "desktop-widget-000000000000
     cx = 170.0
     cy = 135.19999694824219
     output = "DP-1"
+    placement_height = 1440.0
+    placement_width = 2560.0
     rotation = 0.0
     type = "audio_visualizer"
 
@@ -117,6 +119,8 @@ widget_order = [ "desktop-widget-0000000000000001", "desktop-widget-000000000000
     cx = 304.0
     cy = 135.19999694824219
     output = "DP-1"
+    placement_height = 1440.0
+    placement_width = 2560.0
     rotation = 0.0
     type = "fancy_audio_visualizer"
 
@@ -179,11 +183,13 @@ widget_order = [
     visible = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
-    box_height = 103.0
+    box_height = 70.0
     box_width = 400.0
     cx = 1317.0
     cy = 1261.5
     output = "DP-1"
+    placement_height = 1440.0
+    placement_width = 2560.0
     rotation = 0.0
     type = "login_box"
 
@@ -199,15 +205,19 @@ widget_order = [
         show_keyboard_layout = true
         show_login_button = true
         show_media = true
+        show_password_reveal = true
         show_session_buttons = true
+        show_unlock_hint = true
         show_weather = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
-    box_height = 103.0
+    box_height = 70.0
     box_width = 400.0
     cx = 904.0
     cy = 888.5
     output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "login_box"
 
@@ -223,15 +233,19 @@ widget_order = [
         show_keyboard_layout = true
         show_login_button = true
         show_media = true
+        show_password_reveal = true
         show_session_buttons = true
+        show_unlock_hint = true
         show_weather = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@winit"]
-    box_height = 229.0
+    box_height = 196.0
     box_width = 810.0
-    cx = 627.0
-    cy = 1172.5
+    cx = 1254.0
+    cy = 1366.0
     output = "winit"
+    placement_height = 1366.0
+    placement_width = 2560.0
     rotation = 0.0
     type = "login_box"
 
@@ -247,7 +261,9 @@ widget_order = [
         show_keyboard_layout = true
         show_login_button = true
         show_media = true
+        show_password_reveal = true
         show_session_buttons = true
+        show_unlock_hint = true
         show_weather = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
@@ -256,6 +272,8 @@ widget_order = [
     cx = 1715.0
     cy = 102.0
     output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "media_player"
 
@@ -269,6 +287,8 @@ widget_order = [
     cx = 128.0
     cy = 80.0
     output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "weather"
 
@@ -282,6 +302,8 @@ widget_order = [
     cx = 132.0
     cy = 94.0
     output = "DP-1"
+    placement_height = 1440.0
+    placement_width = 2560.0
     rotation = 0.0
     type = "weather"
 
@@ -295,6 +317,8 @@ widget_order = [
     cx = 2303.0
     cy = 132.0
     output = "DP-1"
+    placement_height = 1440.0
+    placement_width = 2560.0
     rotation = 0.0
     type = "media_player"
 
@@ -342,7 +366,6 @@ panel_anchor_bar = "default"
 password_style = "random"
 polkit_agent = true
 screen_time_enabled = true
-telemetry_enabled = true
 
     [shell.launcher]
     compact = true
@@ -394,10 +417,10 @@ telemetry_enabled = true
 
 [theme]
 builtin = "Ayu"
-community_palette = "Atuel"
+community_palette = "ADW"
 mode = "dark"
-source = "wallpaper"
-wallpaper_scheme = "m3-content"
+source = "builtin"
+wallpaper_scheme = "m3-rainbow"
 
     [theme.templates]
     builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "ghostty", "niri", "qt" ]
@@ -408,90 +431,16 @@ directory = "/home/jonathan/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/jonathan/Pictures/Wallpapers/Black-white-girl.png"
+    path = "/home/jonathan/Pictures/Wallpapers/Frieren.png"
 
     [wallpaper.last]
-    path = "/home/jonathan/Pictures/Wallpapers/Black-white-girl.png"
+    path = "/home/jonathan/Pictures/Wallpapers/Frieren.png"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/jonathan/Pictures/Wallpapers/Black-white-girl.png"
+    path = "/home/jonathan/Pictures/Wallpapers/Frieren.png"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/jonathan/Pictures/Wallpapers/Black-white-girl.png"
-
-    [[wallpaper.favorite]]
-    path = "/home/jonathan/Pictures/Wallpapers/EVA-Ayanami.png"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/jonathan/Pictures/Wallpapers/NIX-OS-CHAN-SKETCH.png"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/jonathan/Pictures/Wallpapers/ZATO.....jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/jonathan/Pictures/Wallpapers/MW3-OPS-gun.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/jonathan/Pictures/Wallpapers/HU-TAO-ZHONGLI.png"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/jonathan/Pictures/Wallpapers/Grey-Nix-os.png"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    builtin_palette = "Catppuccin"
-    palette_source = "builtin"
-    path = "/home/jonathan/Pictures/Wallpapers/Nix-osBlue.png"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/jonathan/Pictures/Wallpapers/Black-Anime.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    palette_source = "wallpaper"
-    path = "/home/jonathan/Pictures/Wallpapers/pink cute1.jpg"
-    theme_mode = "dark"
-    wallpaper_scheme = "m3-content"
-
-    [[wallpaper.favorite]]
-    builtin_palette = "Ayu"
-    palette_source = "builtin"
-    path = "/home/jonathan/Pictures/Wallpapers/p3 pink.jpg"
-    theme_mode = "dark"
-
-    [[wallpaper.favorite]]
-    path = "/home/jonathan/Pictures/Wallpapers/Fantasy-Landscape3.png"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    palette_source = "wallpaper"
-    path = "/home/jonathan/Pictures/Wallpapers/pink nateure1.png"
-    theme_mode = "auto"
-    wallpaper_scheme = "m3-tonal-spot"
-
-    [[wallpaper.favorite]]
-    palette_source = "wallpaper"
-    path = "/home/jonathan/Pictures/Wallpapers/Makima-Red.png"
-    theme_mode = "dark"
-    wallpaper_scheme = "m3-content"
-
-    [[wallpaper.favorite]]
-    path = "/home/jonathan/Pictures/Wallpapers/Ada-castle.png"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/jonathan/Pictures/Wallpapers/Sewerslvt.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
     path = "/home/jonathan/Pictures/Wallpapers/Frieren.png"
-    theme_mode = "auto"
 
 [widget.audio_visualizer]
 bands = 10

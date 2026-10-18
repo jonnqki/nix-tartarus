@@ -273,7 +273,7 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
-spawn-at-startup "swww-daemon"
+spawn-at-startup "awww-daemon"
 //spawn-sh-at-startup "sleep 1 && waypaper --restore"
 spawn-at-startup "xwayland-satellite"
 // spawn-at-startup "quickshell"
@@ -458,7 +458,7 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+D hotkey-overlay-title="Run an Application: Noctalia" { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
     Mod+Alt+L hotkey-overlay-title="Lock the Screen: Noctalia" { spawn "noctalia" "msg" "session" "lock"; }
-    Mod+W hotkey-overlay-title="Run default Browser: Zen"{ spawn "zen"; }
+    Mod+W hotkey-overlay-title="Run default Browser: Zen"{ spawn "zen-beta"; }
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
     // For example, this is a standard bind to toggle the screen reader (orca).

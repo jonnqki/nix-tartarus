@@ -63,7 +63,7 @@ in
       export DEFAULT_USER="jonathan"
       add_newline() { print ""; print ""; print "" }
       precmd_functions+=(add_newline)
-      [ -t 1 ] && ~/.local/bin/pokemon.sh
+      [ -t 1 ] && [ -x ~/.local/bin/pokemon.sh ] && ~/.local/bin/pokemon.sh
     '';
   };
 

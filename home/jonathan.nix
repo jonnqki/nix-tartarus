@@ -93,11 +93,13 @@ in
     settings = {
       user.name = "Jonathan";
       user.email = "itsactuallyjustjonn@gmail.com";
-      init.default.Branch = "main";
+      init.defaultBranch = "main";
       pull.rebase = true;
       push.autoSetupRemote = true;
     };
   };
+
+  programs.gh.enable = true; # GitHub CLI
 
   programs.spicetify =
     let

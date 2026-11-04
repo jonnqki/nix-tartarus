@@ -60,6 +60,8 @@ in
       list = "ls -al";
       sshdocker = "ssh jonathan@192.168.1.66";
       ezals = "eza -l --icons --git  --tree";
+      rebuild = "nh os switch";
+      update = "nh os switch --update";
     };
     initContent = ''
       export DEFAULT_USER="jonathan"
@@ -84,6 +86,17 @@ in
   programs.nix-index = {
     enable = true;
     enableZshIntegration = true;
+  };
+
+  programs.git = {
+    enable = true;
+    settings = {
+      user.name = "Jonathan";
+      user.email = "itsactuallyjustjonn@gmail.com";
+      init.default.Branch = "main";
+      pull.rebase = true;
+      push.autoSetupRemote = true;
+    };
   };
 
   programs.spicetify =

@@ -13,9 +13,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
-    ];
-    openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBQ6jpvqCEmQyMHr3/WMsceVV1g0k5iOQgpKb4/W4RlC jonathan@192.168.1.71"
+      "libvirtd"
     ];
     packages = with pkgs; [
       kdePackages.kate

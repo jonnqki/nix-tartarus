@@ -167,9 +167,6 @@
         "Experiments": {
             "enabled": false
         },
-        "ExpressionCloner": {
-            "enabled": false
-        },
         "F8Break": {
             "enabled": false
         },
@@ -603,6 +600,9 @@
         },
         "AddAttachments": {
             "enabled": false
+        },
+        "ExpressionManager": {
+            "enabled": false
         }
     },
     "uiElements": {
@@ -619,7 +619,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1792216094833
+        "settingsSyncVersion": 1793344635627
     },
     "nativeTitleBar": false
 }

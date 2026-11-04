@@ -285,6 +285,14 @@ spawn-at-startup "xwayland-satellite"
 // spawn-at-startup "quickshell"
 spawn-at-startup "noctalia"
 
+//Start up apps
+spawn-at-startup "vesktop"
+spawn-at-startup "zen-beta"
+
+
+
+spawn-at-startup
+
 spawn-sh-at-startup "sleep 1 && niri msg output DP-1 off && niri msg output DP-1 on"
 
 environment {
@@ -726,8 +734,8 @@ binds {
 
 
 cursor {
-	xcursor-theme "Adwaita"
-	xcursor-size 20
+	xcursor-theme "breeze_cursors"
+	xcursor-size 24
 }
 
 

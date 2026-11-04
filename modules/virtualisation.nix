@@ -19,4 +19,13 @@
   # NVIDIA container toolkit is host-specific and lives in the host module.
   virtualisation.docker.enable = true;
   environment.systemPackages = [ pkgs.docker-compose ];
+
+  # QEMU/KVM via libvirt, managed with virt-manager. swtpm provides the
+  # emulated TPM that Windows 11 guests require.
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu.swtpm.enable = true;
+  };
+  virtualisation.spiceUSBRedirection.enable = true;
+  programs.virt-manager.enable = true;
 }

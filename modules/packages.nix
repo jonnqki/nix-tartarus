@@ -10,8 +10,10 @@
       # CLI & system tools
       wget
       ripgrep
+      cava
       tree
       tealdeer
+      eza
       htop
       unzip
       git
@@ -32,9 +34,9 @@
       gcc
       python3
       tree-sitter
-      neovim
       vim
       claude-code
+      ncdu
 
       # Wayland desktop shell & utilities
       xwayland-satellite
@@ -63,10 +65,10 @@
       ani-cli
       pavucontrol
       davinci-resolve
-      cava
 
       # Networking
       mullvad-vpn
+
     ])
     ++ [
       # Flake inputs

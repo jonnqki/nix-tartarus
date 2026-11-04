@@ -59,14 +59,31 @@ in
       clipsls = "ls -la /mnt/backup/clips /mnt/backup/clips/converted";
       list = "ls -al";
       sshdocker = "ssh jonathan@192.168.1.66";
+      ezals = "eza -l --icons --git  --tree";
     };
     initContent = ''
       export DEFAULT_USER="jonathan"
       add_newline() { print ""; print ""; print "" }
       precmd_functions+=(add_newline)
-      [ -t 1 ] && [ -x ~/.local/bin/pokemon.sh ] && ~/.local/bin/pokemon.sh
       [ -t 1 ] && ${lib.getExe pkgs.fastfetch}
     '';
+  };
+
+  #cd
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+    options = [ "--cmd cd" ]; # cd becomes zoxide
+  };
+
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  programs.nix-index = {
+    enable = true;
+    enableZshIntegration = true;
   };
 
   programs.spicetify =
@@ -87,8 +104,24 @@ in
       ];
     };
 
+  programs.neovim = {
+    enable = true;
+    plugins = [ pkgs.vimPlugins.vim-nix ];
+    extraConfig = ''
+      set expandtab shiftwidth=2 tabstop=2 smartindent
+    '';
+  };
+
   # ================================================ (B) ============================================
   # Hand-written configs
+  home.pointerCursor = {
+    name = "breeze_cursors";
+    package = pkgs.kdePackages.breeze;
+    size = 24;
+    gtk.enable = true; # GTK
+    x11.enable = true; # Xwayland
+  };
+
   xdg.configFile = {
     "niri/config.kdl".source = ./dotfiles/niri/config.kdl;
     "fastfetch/config.jsonc".source = ./dotfiles/fastfetch/config.jsonc;

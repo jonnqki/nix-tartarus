@@ -1,4 +1,4 @@
-config_version = 15
+config_version = 16
 
 [accessibility]
 ui_scale = 1.1500000096857548
@@ -86,6 +86,12 @@ minimum_brightness = 0.99999997764825821
 
 [calendar]
 enabled = true
+
+[control_center.calendar]
+show_events_card = true
+
+[control_center.media]
+show_visualizer = false
 
 [desktop_widgets]
 schema_version = 2
@@ -251,7 +257,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@winit".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -336,6 +342,8 @@ history_retention_hours = 1
 
 [osd]
 background_opacity = 0.99999997764825821
+enabled = false
+monitors = []
 
 [plugin_settings."avivbintangaringga/nix-monitor"]
 branch = "nixos-26.05"
@@ -419,7 +427,7 @@ screen_time_enabled = true
 [theme]
 builtin = "Tokyo-Night"
 community_palette = "ADW"
-mode = "auto"
+mode = "dark"
 source = "builtin"
 wallpaper_scheme = "m3-rainbow"
 
@@ -432,16 +440,16 @@ directory = "/home/jonathan/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/jonathan/Pictures/Wallpapers/nix_fem.png"
+    path = "/home/jonathan/Pictures/Wallpapers/Nakano_Miku.jpg"
 
     [wallpaper.last]
-    path = "/home/jonathan/Pictures/Wallpapers/nix_fem.png"
+    path = "/home/jonathan/Pictures/Wallpapers/Nakano_Miku.jpg"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/jonathan/Pictures/Wallpapers/nix_fem.png"
+    path = "/home/jonathan/Pictures/Wallpapers/Nakano_Miku.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/jonathan/Pictures/Wallpapers/nix_fem.png"
+    path = "/home/jonathan/Pictures/Wallpapers/Nakano_Miku.jpg"
 
 [widget.audio_visualizer]
 bands = 10

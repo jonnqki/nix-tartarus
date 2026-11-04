@@ -17,8 +17,10 @@
     "nvidia_uvm"
     "nvidia_drm"
   ];
-  # Test: AOC on DP-1 shows a shifted picture on first boot; skip nvidia's fbdev console
-  boot.kernelParams = [ "nvidia_drm.fbdev=0" ];
+  # Keep nvidia's fbdev (the default): it replaces simpledrm. With fbdev=0 simpledrm stays
+  # as /dev/dri/card0 (fake 1024x768 "Unknown-1" output) and KWin/SDDM pick it, giving a
+  # cut-off/shifted screen on first session. Also stop simpledrm registering at all.
+  boot.kernelParams = [ "initcall_blacklist=simpledrm_platform_driver_init" ];
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
     modesetting.enable = true;

@@ -91,6 +91,13 @@ in
     options = [ "--cmd cd" ]; # cd becomes zoxide
   };
 
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
+    config.global.hide_env-diff = true; # This hides the export list
+  };
+
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;

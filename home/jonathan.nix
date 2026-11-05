@@ -61,7 +61,6 @@ in
     shellAliases = {
       clipsls = "ls -la /mnt/backup/clips /mnt/backup/clips/converted";
       list = "ls -al";
-      sshdocker = "ssh jonathan@192.168.1.66";
       ezals = "eza -l --icons --git  --tree";
       rebuild = "nh os switch";
       update = "nh os switch --update";
@@ -72,6 +71,17 @@ in
       precmd_functions+=(add_newline)
       [ -t 1 ] && ${lib.getExe pkgs.fastfetch}
     '';
+  };
+
+  programs.ssh = {
+    enable = true;
+    enableDefaultConfig = false;
+    matchBlocks = {
+      docker = {
+        hostname = "192.168.1.66";
+        user = "jonathan";
+      };
+    };
   };
 
   #cd

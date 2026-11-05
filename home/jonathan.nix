@@ -15,7 +15,10 @@ let
   repoDots = "${config.home.homeDirectory}/nixos-config/home/dotfiles";
 in
 {
-  imports = [ inputs.spicetify-nix.homeManagerModules.default ];
+  imports = [
+    inputs.spicetify-nix.homeManagerModules.default
+    inputs.nix-index-database.homeModules.nix-index
+  ];
 
   home.username = "jonathan";
   home.homeDirectory = "/home/jonathan";

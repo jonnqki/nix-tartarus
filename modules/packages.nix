@@ -11,6 +11,7 @@
       wget
       ripgrep
       cava
+      gparted
       tree
       tealdeer
       eza

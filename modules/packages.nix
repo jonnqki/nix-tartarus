@@ -14,7 +14,6 @@
       gparted
       tree
       tealdeer
-      htop
       unzip
       git
       fastfetch
@@ -59,7 +58,6 @@
       telegram-desktop
       vesktop
       spotify
-      mpv
       qbittorrent
       obs-cmd
       ani-cli

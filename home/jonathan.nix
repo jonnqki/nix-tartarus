@@ -90,10 +90,10 @@ in
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
-    matchBlocks = {
+    settings = {
       docker = {
-        hostname = "192.168.1.66";
-        user = "jonathan";
+        HostName = "192.168.1.66";
+        User = "jonathan";
       };
     };
   };
@@ -159,6 +159,26 @@ in
     extraConfig = ''
       set expandtab shiftwidth=2 tabstop=2 smartindent
     '';
+  };
+
+  programs.bat.enable = true;
+
+  programs.btop = {
+    enable = true;
+    settings = {
+      color-theme = "TTY"; # uses your terminal colours,
+      theme_background = false; # transparent
+      update_ms = 1000;
+    };
+  };
+
+  programs.mpv = {
+    enable = true;
+    config = {
+      hwdec = "auto-safe"; # uses Nvidia gpu for decoding
+      save-position-on-quit = true; # resumes where you leave off
+      volume-max = 150;
+    };
   };
 
   # ================================================ (B) ============================================

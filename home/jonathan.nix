@@ -181,6 +181,8 @@ in
     };
   };
 
+  services.playerctld.enable = true;
+
   # ================================================ (B) ============================================
   # Hand-written configs
   home.pointerCursor = {

@@ -440,16 +440,16 @@ directory = "/home/jonathan/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/jonathan/Pictures/Wallpapers/ns1.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/Mikotop5.jpg"
 
     [wallpaper.last]
-    path = "/home/jonathan/Pictures/Wallpapers/ns1.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/Mikotop5.jpg"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/jonathan/Pictures/Wallpapers/ns1.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/Mikotop5.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/jonathan/Pictures/Wallpapers/ns1.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/Mikotop5.jpg"
 
 [widget.audio_visualizer]
 bands = 10

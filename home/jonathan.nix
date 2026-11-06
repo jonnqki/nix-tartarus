@@ -68,7 +68,6 @@ in
     shellAliases = {
       clipsls = "ls -la /mnt/backup/clips /mnt/backup/clips/converted";
       list = "ls -al";
-      ezals = "eza -l --icons --git  --tree";
       rebuild = "nh os switch";
       update = "nh os switch --update";
     };
@@ -78,6 +77,14 @@ in
       precmd_functions+=(add_newline)
       [ -t 1 ] && ${lib.getExe pkgs.fastfetch}
     '';
+  };
+
+  programs.eza = {
+    enable = true;
+    enableZshIntegration = true;
+    icons = "auto";
+    git = true;
+    extraOptions = [ "--group-directories-first" ];
   };
 
   programs.ssh = {

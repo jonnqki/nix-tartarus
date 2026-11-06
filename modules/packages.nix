@@ -14,7 +14,6 @@
       gparted
       tree
       tealdeer
-      eza
       htop
       unzip
       git

@@ -65,6 +65,9 @@
   my.goxlr.enable = true;
   my.gaming.enable = true;
 
+  #Tartarus-only Home Manager config, on top of home/jonathan.nix
+  home-manager.users.jonathan.imports = [ ../../home/tartarus.nix ];
+
   # Second drive (backup) — UUID is specific to this machine
   fileSystems."/mnt/backup" = {
     device = "/dev/disk/by-uuid/ed4328c4-1a59-464a-9fcb-21105c9ca84f";

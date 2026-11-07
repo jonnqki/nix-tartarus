@@ -73,10 +73,8 @@ in
     telegram-desktop
     vesktop
     qbittorrent
-    obs-cmd
     ani-cli
     pavucontrol
-    davinci-resolve
   ];
 
   # ======================================================== (A) ==================================================

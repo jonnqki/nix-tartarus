@@ -8,6 +8,8 @@
       "flakes"
     ];
 
+    auto-optimise-store = true;
+
     # Binary caches
     substituters = [ "https://noctalia.cachix.org" ];
     trusted-public-keys = [

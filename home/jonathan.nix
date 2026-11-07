@@ -30,6 +30,55 @@ in
     "$HOME/.spicetify"
   ];
 
+  home.packages = with pkgs; [
+
+    #CLI based & system tools
+    ripgrep
+    cava
+    tree
+    tealdeer
+    unzip
+    fastfetch
+    cmatrix
+    cowsay
+    nmap
+    hyprpicker
+    wl-clipboard
+    playerctl
+    yt-dlp
+    ffmpeg
+
+    # Development
+    gcc
+    python3
+    tree-sitter
+    claude-code
+    ncdu
+
+    # Wayland desktop shell & utilities
+    xwayland-satellite
+    swaybg
+    fuzzel
+    waypaper
+    awww
+    quickshell
+    orca
+    dconf
+    glib
+    ghostty
+    nautilus
+
+    # Applications
+    brave
+    telegram-desktop
+    vesktop
+    qbittorrent
+    obs-cmd
+    ani-cli
+    pavucontrol
+    davinci-resolve
+  ];
+
   # ======================================================== (A) ==================================================
 
   programs.ghostty = {
@@ -109,7 +158,7 @@ in
     enable = true;
     enableZshIntegration = true;
     nix-direnv.enable = true;
-    config.global.hide_env-diff = true; # This hides the export list
+    config.global.hide_env_diff = true; # This hides the export list
   };
 
   programs.fzf = {
@@ -166,7 +215,7 @@ in
   programs.btop = {
     enable = true;
     settings = {
-      color-theme = "TTY"; # uses your terminal colours,
+      color_theme = "TTY"; # uses your terminal colours,
       theme_background = false; # transparent
       update_ms = 1000;
     };

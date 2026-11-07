@@ -9,60 +9,10 @@
     (with pkgs; [
       # CLI & system tools
       wget
-      ripgrep
-      cava
-      gparted
-      tree
-      tealdeer
-      unzip
       git
-      fastfetch
-      cmatrix
-      pokeget-rs
-      cowsay
-      nmap
-      pciutils
-      wl-clipboard
-      playerctl
       sbctl
       ddcutil
-      yt-dlp
-      ffmpeg
-
-      # Development
-      gcc
-      python3
-      tree-sitter
-      vim
-      claude-code
-      ncdu
-
-      # Wayland desktop shell & utilities
-      xwayland-satellite
-      swaybg
-      fuzzel
-      hyprlock
-      hyprpicker
-      waypaper
-      awww
-      quickshell
-      orca
-      dconf
-      glib
-      ghostty
-      nautilus
-
-      # Applications
-      google-chrome
-      brave
-      telegram-desktop
-      vesktop
-      spotify
-      qbittorrent
-      obs-cmd
-      ani-cli
-      pavucontrol
-      davinci-resolve
+      gparted
 
       # Networking
       mullvad-vpn

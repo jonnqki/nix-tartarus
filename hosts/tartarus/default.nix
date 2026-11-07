@@ -63,6 +63,7 @@
 
   # GoXLR lives on this box only
   my.goxlr.enable = true;
+  my.gaming.enable = true;
 
   # Second drive (backup) — UUID is specific to this machine
   fileSystems."/mnt/backup" = {

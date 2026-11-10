@@ -29,7 +29,11 @@
       protonup-qt
       wine-wayland
       winetricks
-      deadlock-mod-manager
+      # nixpkgs' cargo hook forces AWS_LC_SYS_USE_SYSTEM=1, but the package
+      # doesn't provide aws-lc. Drop this override once nixpkgs adds it.
+      (deadlock-mod-manager.overrideAttrs (old: {
+        buildInputs = (old.buildInputs or [ ]) ++ [ aws-lc ];
+      }))
     ];
   };
 }

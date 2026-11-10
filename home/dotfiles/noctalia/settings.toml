@@ -1,10 +1,13 @@
 config_version = 19
 
 [accessibility]
-ui_scale = 1.1500000096857548
+ui_scale = 1.1000000089406967
 
 [audio]
 enable_overdrive = true
+
+[backdrop]
+enabled = false
 
 [bar]
 order = [ "default", "test", "barszddcszcx" ]
@@ -369,7 +372,8 @@ enabled = [
 
 [shell]
 avatar_path = "/home/jonathan/Downloads/IMG_2817.jpg"
-font_family = "JetBrainsMono NFM"
+corner_radius_scale = 0.45000000670552254
+font_family = "Arial"
 niri_overview_type_to_launch_enabled = true
 panel_anchor_bar = "default"
 password_style = "random"
@@ -426,9 +430,9 @@ screen_time_enabled = true
 
 [theme]
 builtin = "Tokyo-Night"
-community_palette = "ADW"
+community_palette = "GitHub Dark"
 mode = "dark"
-source = "builtin"
+source = "community"
 wallpaper_scheme = "m3-rainbow"
 
     [theme.templates]
@@ -440,16 +444,16 @@ directory = "/home/jonathan/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/jonathan/Pictures/Wallpapers/Mikotop5.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/perso-na.jpg"
 
     [wallpaper.last]
-    path = "/home/jonathan/Pictures/Wallpapers/Mikotop5.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/perso-na.jpg"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/jonathan/Pictures/Wallpapers/Mikotop5.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/perso-na.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/jonathan/Pictures/Wallpapers/Mikotop5.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/perso-na.jpg"
 
 [widget.audio_visualizer]
 bands = 10

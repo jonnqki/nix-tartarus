@@ -13,6 +13,22 @@
 let
   # Absolute path to this repo's dotfiles on the live machine, for pattern (C).
   repoDots = "${config.home.homeDirectory}/nixos-config/home/dotfiles";
+
+  # Animated Hatsune Miku Xcursor theme (port of petit devil's Windows set).
+  miku-cursor = pkgs.stdenvNoCC.mkDerivation {
+    pname = "miku-cursor";
+    version = "0-unstable-319e9ff";
+    src = pkgs.fetchFromGitHub {
+      owner = "supermariofps";
+      repo = "hatsune-miku-windows-linux-cursors";
+      rev = "319e9ffbe38a6c8f31c7d6ad65c5c9a8337eba7c";
+      hash = "sha256-1Rq15Up90Vnn0c7ScgbmRZsc8k70J9pTW+Rtm0xBvGM=";
+    };
+    installPhase = ''
+      mkdir -p $out/share/icons
+      cp -r miku-cursor-linux $out/share/icons/miku-cursor
+    '';
+  };
 in
 {
   imports = [
@@ -69,7 +85,6 @@ in
     nautilus
 
     # Applications
-    brave
     telegram-desktop
     vesktop
     qbittorrent
@@ -234,8 +249,8 @@ in
   # Hand-written configs
   home.pointerCursor = {
     enable = true;
-    name = "breeze_cursors";
-    package = pkgs.kdePackages.breeze;
+    name = "miku-cursor";
+    package = miku-cursor;
     size = 24;
     gtk.enable = true; # GTK
     x11.enable = true; # Xwayland

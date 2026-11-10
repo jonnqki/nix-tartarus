@@ -251,7 +251,7 @@ spawn-at-startup "xwayland-satellite"
 spawn-at-startup "noctalia"
 
 //Start up apps
-spawn-at-startup "vesktop"
+spawn-at-startup "vesktop" "--start-minimized"
 spawn-at-startup "zen-beta"
 
 
@@ -699,7 +699,7 @@ binds {
 
 
 cursor {
-	xcursor-theme "breeze_cursors"
+	xcursor-theme "miku-cursor"
 	xcursor-size 24
 }
 

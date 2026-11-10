@@ -1,22 +1,16 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 palette = "noctalia"
 
-# Powerline prompt in the spirit of agnoster. Every colour is a name from the
-# "noctalia" palette below, which Noctalia rewrites whenever the theme changes.
+# Flat colour blocks. Every colour is a name from the "noctalia" palette at the
+# bottom, which Noctalia rewrites whenever the theme changes.
 add_newline = false
 format = """
-[](pink)\
 $username\
-[](bg:mauve fg:pink)\
 $directory\
-[](fg:mauve bg:surface1)\
 $git_branch\
 $git_status\
-[](fg:surface1 bg:surface0)\
 $nix_shell\
-$direnv\
 $cmd_duration\
-[ ](fg:surface0)\
 $line_break$character"""
 
 [username]
@@ -31,24 +25,20 @@ format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
+# Branch and its status share one block: "  main ! "
 [git_branch]
-symbol = ""
-style = "bg:surface1 fg:pink"
-format = "[ $symbol $branch ]($style)"
+symbol = ""
+style = "bg:surface1 fg:green bold"
+format = "[ $symbol $branch]($style)[ ](bg:surface1)"
 
 [git_status]
-style = "bg:surface1 fg:pink"
-format = "[($all_status$ahead_behind )]($style)"
+style = "bg:surface1 fg:yellow bold"
+format = "([$all_status$ahead_behind ]($style))"
 
 [nix_shell]
 symbol = "❄"
 style = "bg:surface0 fg:sky"
 format = "[ $symbol $state ]($style)"
-
-[direnv]
-disabled = false
-style = "bg:surface0 fg:green"
-format = "[ $loaded ]($style)"
 
 [cmd_duration]
 min_time = 2000
@@ -65,40 +55,40 @@ error_symbol = "[❯](bold red)"
 
 [palettes.noctalia]
 # Standard colors
-blue      = "#458588"
-red       = "#cc241d"
-green     = "#98971a"
-yellow    = "#d79921"
-cyan      = "#689d6a"
-magenta   = "#b16286"
-white     = "#a89984"
-black     = "#282828"
+blue      = "#ffaaf5"
+red       = "#ffb4ab"
+green     = "#c1c1ff"
+yellow    = "#d9baf8"
+cyan      = "#94cef3"
+magenta   = "#a9c8fd"
+white     = "#c7c4d7"
+black     = "#464555"
 
 # Extended palette (Catppuccin-compatible names)
-rosewater = "#fabd2f"
-flamingo  = "#fb4934"
-pink      = "#d3869b"
-mauve     = "#b16286"
-maroon    = "#fb4934"
-peach     = "#fabd2f"
-teal      = "#689d6a"
-sky       = "#8ec07c"
-sapphire  = "#83a598"
-lavender  = "#d3869b"
+rosewater = "#f9c8f1"
+flamingo  = "#ffcbc5"
+pink      = "#b5dcf8"
+mauve     = "#a9c8fd"
+maroon    = "#ffcbc5"
+peach     = "#f9c8f1"
+teal      = "#94cef3"
+sky       = "#a1e2f0"
+sapphire  = "#ffce97"
+lavender  = "#b5dcf8"
 
 # Text shades
-text      = "#ebdbb2"
-subtext1  = "#a89984"
-subtext0  = "#928374"
+text      = "#e4e1ed"
+subtext1  = "#c7c4d7"
+subtext0  = "#908fa0"
 
 # Surface shades
-overlay2  = "#928374"
-overlay1  = "#928374"
-overlay0  = "#282828"
-surface2  = "#282828"
-surface1  = "#282828"
-surface0  = "#282828"
-base      = "#282828"
-mantle    = "#282828"
-crust     = "#282828"
+overlay2  = "#908fa0"
+overlay1  = "#908fa0"
+overlay0  = "#464555"
+surface2  = "#464555"
+surface1  = "#464555"
+surface0  = "#13131b"
+base      = "#13131b"
+mantle    = "#13131b"
+crust     = "#13131b"
 # <<< NOCTALIA STARSHIP PALETTE <<<

@@ -252,6 +252,7 @@ spawn-at-startup "noctalia"
 
 //Start up apps
 spawn-at-startup "vesktop" "--start-minimized"
+spawn-at-startup "keepassxc"
 spawn-at-startup "zen-beta"
 
 

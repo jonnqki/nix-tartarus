@@ -430,30 +430,30 @@ screen_time_enabled = true
 
 [theme]
 builtin = "Tokyo-Night"
-community_palette = "GitHub Dark"
+community_palette = "GruvboxAlt"
 mode = "dark"
 source = "community"
 wallpaper_scheme = "m3-rainbow"
 
     [theme.templates]
     builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "ghostty", "niri", "qt" ]
-    community_ids = [ "zen-browser", "telegram", "steam", "fastfetch", "obs" ]
+    community_ids = [ "claude-code", "zen-browser", "telegram", "blender", "steam", "fastfetch", "obs", "fzf", "starship", "bat" ]
 
 [wallpaper]
 directory = "/home/jonathan/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/jonathan/Pictures/Wallpapers/perso-na.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/sage_val.png"
 
     [wallpaper.last]
-    path = "/home/jonathan/Pictures/Wallpapers/perso-na.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/sage_val.png"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/jonathan/Pictures/Wallpapers/perso-na.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/sage_val.png"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/jonathan/Pictures/Wallpapers/perso-na.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/sage_val.png"
 
 [widget.audio_visualizer]
 bands = 10

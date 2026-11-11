@@ -31,6 +31,11 @@
       url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    artcraft-nix = {
+      url = "github:ipeglin/artcraft-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -68,6 +73,8 @@
           home-manager.extraSpecialArgs = { inherit inputs; };
           home-manager.users.jonathan = import ./home/jonathan.nix;
         }
+        inputs.artcraft-nix.nixosModules.default
+        { programs.artcraft.enable = true; }
       ];
 
       mkHost =

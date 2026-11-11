@@ -281,6 +281,34 @@ in
     x11.enable = true; # Xwayland
   };
 
+  # Plasma left breeze_cursors in GTK's settings.ini and in dconf, so GTK/libadwaita
+  # apps ignored the theme above. HM now owns settings.ini (cursor comes from
+  # pointerCursor.gtk); icon theme and font are carried over from Plasma's file.
+  # Noctalia only writes the gtk.css files, so this doesn't clash with it.
+  gtk = {
+    enable = true;
+    iconTheme.name = "breeze";
+    font = {
+      name = "Noto Sans";
+      size = 10;
+    };
+  };
+  # GTK4 / libadwaita and the settings portal (used by Flatpaks) read this.
+  dconf.settings."org/gnome/desktop/interface" = {
+    cursor-theme = "miku-cursor";
+    cursor-size = 24;
+  };
+  # Flatpaks can't see ~/.icons or the /nix/store paths it links to.
+  xdg.dataFile."flatpak/overrides/global".text = ''
+    [Context]
+    filesystems=~/.icons:ro;~/.local/share/icons:ro;/nix/store:ro;
+
+    [Environment]
+    XCURSOR_PATH=${config.home.homeDirectory}/.icons:${config.home.homeDirectory}/.local/share/icons
+    XCURSOR_THEME=miku-cursor
+    XCURSOR_SIZE=24
+  '';
+
   xdg.configFile = {
     "niri/config.kdl".source = ./dotfiles/niri/config.kdl;
     "waypaper/config.ini".source = ./dotfiles/waypaper/config.ini;

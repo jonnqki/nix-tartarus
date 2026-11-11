@@ -59,6 +59,7 @@ in
 
     #CLI based & system tools
     ripgrep
+    fd
     cava
     tree
     tealdeer

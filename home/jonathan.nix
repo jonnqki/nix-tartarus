@@ -232,7 +232,12 @@ in
 
   programs.neovim = {
     enable = true;
-    plugins = [ pkgs.vimPlugins.vim-nix ];
+    plugins = with pkgs.vimPlugins; [
+      vim-nix
+      fzf-lua
+      nvim-web-devicons # file icons
+    ];
+
     extraConfig = ''
       set expandtab shiftwidth=2 tabstop=2 smartindent
     '';

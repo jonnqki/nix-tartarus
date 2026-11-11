@@ -4,7 +4,9 @@
     "useQuickCss": true,
     "themeLinks": [],
     "eagerPatches": false,
-    "enabledThemes": [],
+    "enabledThemes": [
+        "noctalia-material.theme.css"
+    ],
     "enableReactDevtools": false,
     "frameless": false,
     "transparent": true,
@@ -77,7 +79,8 @@
             "closeAllFolders": false,
             "forceOpen": false,
             "sidebarAnim": true,
-            "closeOthers": false
+            "closeOthers": false,
+            "closeServerFolder": false
         },
         "BetterGifAltText": {
             "enabled": false
@@ -150,7 +153,8 @@
             "enabled": false
         },
         "CustomRPC": {
-            "enabled": true
+            "enabled": true,
+            "enablePresence": true
         },
         "Dearrow": {
             "enabled": false
@@ -281,7 +285,8 @@
             "ignoreGuilds": "",
             "logEdits": true,
             "logDeletes": true,
-            "inlineEdits": true
+            "inlineEdits": true,
+            "logDeletedAttachments": true
         },
         "MoreQuickReactions": {
             "enabled": false
@@ -603,6 +608,18 @@
         },
         "ExpressionManager": {
             "enabled": false
+        },
+        "BetterSearch": {
+            "enabled": false
+        },
+        "DirectFileDownload": {
+            "enabled": false
+        },
+        "JumpToTop": {
+            "enabled": false
+        },
+        "MutedServersActivityBadge": {
+            "enabled": false
         }
     },
     "uiElements": {
@@ -619,7 +636,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1793344635627
+        "settingsSyncVersion": 1794390328542
     },
     "nativeTitleBar": false
 }

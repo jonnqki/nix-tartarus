@@ -10,7 +10,7 @@ enable_overdrive = true
 enabled = false
 
 [bar]
-order = [ "default", "test", "barszddcszcx" ]
+order = [ "default", "test", "barszddcszcx", "new" ]
 
     [bar.barszddcszcx]
     enabled = false
@@ -23,6 +23,7 @@ order = [ "default", "test", "barszddcszcx" ]
     border_width = 1.0
     capsule = true
     center = [ "clock", "weather", "launcher_2" ]
+    enabled = false
     end = [
         "media",
         "tray",
@@ -51,6 +52,17 @@ order = [ "default", "test", "barszddcszcx" ]
         position = "right"
         thickness = 30
 
+    [bar.new]
+    auto_hide_reserve_space = false
+    background_opacity = 0.99999997764825821
+    enabled = true
+    font_family = "MesloLGS Nerd Font"
+    padding = 17
+    radius = 80
+    shadow = false
+    smart_auto_hide = true
+    widget_spacing = 13
+
     [bar.test]
     border = "on_primary"
     border_width = 2.5
@@ -74,10 +86,10 @@ order = [ "default", "test", "barszddcszcx" ]
     padding = 15
     panel_overlap = 0
     position = "right"
-    radius = 28
+    radius = 36
     radius_bottom_left = 63
-    radius_bottom_right = 45
-    radius_top_left = 65
+    radius_bottom_right = 49
+    radius_top_left = 62
     scale = 1.5000000149011612
     start = [ "launcher", "wallpaper", "network", "workspaces" ]
     thickness = 46
@@ -373,7 +385,7 @@ enabled = [
 [shell]
 avatar_path = "/home/jonathan/Downloads/IMG_2817.jpg"
 corner_radius_scale = 0.45000000670552254
-font_family = "Arial"
+font_family = "DejaVu Sans"
 niri_overview_type_to_launch_enabled = true
 panel_anchor_bar = "default"
 password_style = "random"
@@ -433,27 +445,39 @@ builtin = "Tokyo-Night"
 community_palette = "Catppuccin Mocha Pink"
 mode = "dark"
 source = "wallpaper"
-wallpaper_scheme = "m3-fruit-salad"
+wallpaper_scheme = "m3-content"
 
     [theme.templates]
     builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "ghostty", "niri", "qt" ]
-    community_ids = [ "claude-code", "zen-browser", "telegram", "blender", "steam", "fastfetch", "obs", "fzf", "starship", "bat" ]
+    community_ids = [
+        "claude-code",
+        "zen-browser",
+        "discord",
+        "telegram",
+        "blender",
+        "steam",
+        "fastfetch",
+        "obs",
+        "bat",
+        "fzf",
+        "starship"
+    ]
 
 [wallpaper]
 directory = "/home/jonathan/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/jonathan/Pictures/Wallpapers/wallhaven-werdv6.png"
+    path = "/home/jonathan/Pictures/Wallpapers/hush-val.png"
 
     [wallpaper.last]
-    path = "/home/jonathan/Pictures/Wallpapers/wallhaven-werdv6.png"
+    path = "/home/jonathan/Pictures/Wallpapers/hush-val.png"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/jonathan/Pictures/Wallpapers/wallhaven-werdv6.png"
+    path = "/home/jonathan/Pictures/Wallpapers/hush-val.png"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/jonathan/Pictures/Wallpapers/wallhaven-werdv6.png"
+    path = "/home/jonathan/Pictures/Wallpapers/hush-val.png"
 
 [widget.audio_visualizer]
 bands = 10
@@ -470,6 +494,9 @@ width = 93
 device = "/org/freedesktop/UPower/devices/battery_ps_controller_battery_4cob9o9bo38o19ofb"
 hide_when_full = true
 hide_when_plugged = true
+
+[widget.clock]
+scale = 1.2
 
 [widget.keybinds]
 type = "kenn/keybind-cheatsheet:keybinds"

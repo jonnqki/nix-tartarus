@@ -236,11 +236,16 @@ in
     plugins = with pkgs.vimPlugins; [
       vim-nix
       fzf-lua
-      nvim-web-devicons # file icons
     ];
 
     extraConfig = ''
       set expandtab shiftwidth=2 tabstop=2 smartindent
+    '';
+
+    extraLuaConfig = ''
+      vim.g.mapleader = " "
+      vim.keymap.set("n", "<leader>ff", "<cmd>FzfLua files<cr>")
+      vim.keymap.set("n", "<leader>fg", "<cmd>FzfLua live_grep<cr>")
     '';
   };
 

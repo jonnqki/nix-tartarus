@@ -11,3 +11,6 @@ result-*
 
 # direnv cache
 .direnv/
+
+#Docs
+.docs/

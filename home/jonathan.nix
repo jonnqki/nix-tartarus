@@ -60,6 +60,7 @@ in
     #CLI based & system tools
     ripgrep
     fd
+    yazi
     cava
     tree
     tealdeer

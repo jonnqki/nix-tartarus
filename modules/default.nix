@@ -18,5 +18,6 @@
     ./fonts.nix
     ./packages.nix
     ./goxlr.nix
+    ./secureboot.nix
   ];
 }

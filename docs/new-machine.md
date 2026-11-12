@@ -22,6 +22,7 @@ Optional features use on/off switches, set per host:
 
 - `my.gaming.enable = true;` turns on Steam, launchers and Wine
 - `my.goxlr.enable = true;` turns on the GoXLR utility
+- `my.secureboot.enable = true;` turns on Secure Boot with Lanzaboote (only once keys are enrolled)
 
 ### How `rebuild` picks the machine
 
@@ -42,7 +43,7 @@ A fresh install is called `nixos`, so the **first** build has to name the machin
 
 - Use the normal installer.
 - Use the username `jonathan`, so the home config fits.
-- Leave Secure Boot **off** in the BIOS for now. Set it up after everything works (ideally with Lanzaboote).
+- Leave Secure Boot **off** in the BIOS for now. Once everything works, create and enroll keys (`sudo sbctl create-keys`, then put the BIOS in Setup Mode and run `sudo sbctl enroll-keys --microsoft`), set `my.secureboot.enable = true;` in the host file, rebuild, and then turn Secure Boot on.
 
 ### 2. Clone the repo
 

@@ -341,7 +341,8 @@ in
     # Vesktop rewrites these when you change settings in-app
     "vesktop/settings.json".source =
       config.lib.file.mkOutOfStoreSymlink "${repoDots}/vesktop/settings.json";
-    "vesktop/state.json".source = config.lib.file.mkOutOfStoreSymlink "${repoDots}/vesktop/state.json";
+    # state.json is NOT managed: Vesktop replaces the file on every run (window
+    # geometry), which breaks the symlink and makes HM activation fail on backups.
     "vesktop/settings/settings.json".source =
       config.lib.file.mkOutOfStoreSymlink "${repoDots}/vesktop/settings/settings.json";
     "vesktop/settings/native-settings.json".source =

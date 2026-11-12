@@ -4,9 +4,15 @@
 {
   hardware.graphics.enable = true;
   hardware.graphics.enable32Bit = true; # Steam
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+    theme = "sddm-astronaut-theme";
+    extraPackages = with pkgs; [ sddm-astronaut ];
+  };
   services.desktopManager.plasma6.enable = true;
+  environment.systemPackages = [ (pkgs.sddm-astronaut.override { embeddedTheme = "pixel_sakura"; }) ];
+
   services.displayManager.defaultSession = lib.mkForce "niri";
 
   # The greeter's QML cache is keyed on /run/current-system paths and fixed Nix

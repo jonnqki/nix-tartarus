@@ -57,6 +57,15 @@
     }
   );
 
+  # Give the SDDM greeter's kwin the same monitor layout as the desktop
+  # (DP-1 primary, HDMI-A-1 second). Without this the sddm user has no
+  # kwinoutputconfig.json and kwin picks the wrong primary monitor.
+  # Snapshot of ~/.config/kwinoutputconfig.json; re-copy if monitors change.
+  systemd.tmpfiles.rules = [
+    "d /var/lib/sddm/.config 0750 sddm sddm -"
+    "C+ /var/lib/sddm/.config/kwinoutputconfig.json 0640 sddm sddm - ${./sddm-kwinoutputconfig.json}"
+  ];
+
   # NVIDIA Container Toolkit — lets Docker containers see the GPU.
   # Host-specific because it depends on the NVIDIA driver above.
   hardware.nvidia-container-toolkit.enable = true;

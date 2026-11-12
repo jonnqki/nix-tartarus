@@ -1,4 +1,7 @@
 output "DP-1" {
+    // Focus this monitor (and put the cursor on it) when niri starts.
+    focus-at-startup
+
     // Uncomment this line to disable this output.
     // off
 

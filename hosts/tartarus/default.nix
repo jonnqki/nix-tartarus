@@ -64,6 +64,7 @@
   # GoXLR lives on this box only
   my.goxlr.enable = true;
   my.gaming.enable = true;
+  my.secureboot.enable = true;
 
   #Tartarus-only Home Manager config, on top of home/jonathan.nix
   home-manager.users.jonathan.imports = [ ../../home/tartarus.nix ];

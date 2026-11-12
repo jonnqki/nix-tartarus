@@ -27,6 +27,12 @@
     # no nixpkgs.follows on purpose: keeps the noctalia binary cache usable
     noctalia.url = "github:noctalia-dev/noctalia";
 
+    # Secure Boot: builds and signs boot files automatically on every rebuild
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v1.2.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     git-hooks = {
       url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";

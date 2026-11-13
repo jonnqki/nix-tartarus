@@ -177,7 +177,7 @@
                         "replicationSource": ""
                     },
                     {
-                        "enabled": true,
+                        "enabled": false,
                         "outputIndex": 1,
                         "position": {
                             "x": 2560,
@@ -212,7 +212,7 @@
                         "replicationSource": ""
                     },
                     {
-                        "enabled": true,
+                        "enabled": false,
                         "outputIndex": 1,
                         "position": {
                             "x": 2560,

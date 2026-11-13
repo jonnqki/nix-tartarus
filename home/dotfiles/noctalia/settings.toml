@@ -1,4 +1,4 @@
-config_version = 19
+config_version = 20
 
 [accessibility]
 ui_scale = 1.1000000089406967
@@ -451,10 +451,12 @@ wallpaper_scheme = "m3-content"
     builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "ghostty", "niri", "qt" ]
     community_ids = [
         "claude-code",
+        "spicetify-noctalia",
         "zen-browser",
         "discord",
         "telegram",
         "blender",
+        "lazyvim",
         "steam",
         "fastfetch",
         "obs",
@@ -468,16 +470,16 @@ directory = "/home/jonathan/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/jonathan/Pictures/Wallpapers/Nakano_Miku.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/Columbia.jpg"
 
     [wallpaper.last]
-    path = "/home/jonathan/Pictures/Wallpapers/Nakano_Miku.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/Columbia.jpg"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/jonathan/Pictures/Wallpapers/Nakano_Miku.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/Columbia.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/jonathan/Pictures/Wallpapers/Nakano_Miku.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/Columbia.jpg"
 
 [widget.audio_visualizer]
 bands = 10

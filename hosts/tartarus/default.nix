@@ -57,9 +57,10 @@
     }
   );
 
-  # Give the SDDM greeter's kwin the same monitor layout as the desktop
-  # (DP-1 primary, HDMI-A-1 second). Without this the sddm user has no
-  # kwinoutputconfig.json and kwin picks the wrong primary monitor.
+  # SDDM greeter monitor layout. HDMI-A-1 is disabled here on purpose:
+  # SDDM makes one greeter view per screen and keyboard focus always lands
+  # on the last-added one regardless of kwin's primary/priority settings
+  # (sddm/sddm#2052), so the only reliable fix is a single screen (DP-1).
   # Snapshot of ~/.config/kwinoutputconfig.json; re-copy if monitors change.
   systemd.tmpfiles.rules = [
     "d /var/lib/sddm/.config 0750 sddm sddm -"

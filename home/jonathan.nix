@@ -60,6 +60,7 @@ in
     #CLI based & system tools
     ripgrep
     fd
+    spicetify-cli
     yazi
     cava
     tree
@@ -166,6 +167,10 @@ in
     extraOptions = [ "--group-directories-first" ];
   };
 
+  # SSH host aliases. One ed25519 key per machine I sit at (~/.ssh/id_ed25519),
+  # reused across all hosts. To add a host:
+  #   1. copy the block shape below with the new name/IP/user
+  #   2. rebuild, then run: ssh-copy-id <alias>
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
@@ -173,6 +178,8 @@ in
       docker = {
         HostName = "192.168.1.66";
         User = "jonathan";
+        IdentityFile = "~/.ssh/id_ed25519";
+        IdentitiesOnly = "yes";
       };
     };
   };
@@ -214,23 +221,24 @@ in
 
   programs.gh.enable = true; # GitHub CLI
 
-  programs.spicetify =
-    let
-      spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
-    in
-    {
-      enable = true;
-      theme = spicePkgs.themes.comfy;
-      colorScheme = "Comfy";
-      enabledExtensions = with spicePkgs.extensions; [
-        adblock
-        shuffle
-        {
-          src = ./dotfiles/spicetify;
-          name = "lyrics-translate.js";
-        }
-      ];
-    };
+  ##use native spotify and not flatpak, this is for noctailia theming
+  ###programs.spicetify =
+  #let
+  #  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+  #in
+  #{
+  #  enable = true;
+  #  #theme = spicePkgs.themes.comfy;
+  #  #colorScheme = "Comfy";
+  #  enabledExtensions = with spicePkgs.extensions; [
+  #    adblock
+  #    shuffle
+  #    {
+  #      src = ./dotfiles/spicetify;
+  #      name = "lyrics-translate.js";
+  #    }
+  #  ];
+  #};
 
   programs.neovim = {
     enable = true;

@@ -188,6 +188,12 @@ in
         IdentityFile = "~/.ssh/id_ed25519";
         IdentitiesOnly = "yes";
       };
+      pve = {
+        HostName = "192.168.1.141";
+        User = "root";
+        IdentityFile = "~/.ssh/id_ed25519";
+        IdentitiesOnly = "yes";
+      };
     };
   };
 

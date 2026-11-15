@@ -13,7 +13,6 @@
     "host",
     "kernel",
     "uptime",
-    "packages",
     "shell",
     "display",
     "de",
@@ -39,19 +38,19 @@
   ],
   "logo": {
     "color": {
-      "1": "#63c2ff",
-      "2": "#63c3f7"
+      "1": "#63ccfa",
+      "2": "#63c8da"
     }
   },
   "display": {
     "color": {
-      "keys": "#bdc2ff",
-      "title": "#bec3f7"
+      "keys": "#9accfa",
+      "title": "#b8c8da"
     },
     "percent": {
       "color": {
-        "green": "#ffa9fa",
-        "yellow": "#bdc2ff",
+        "green": "#d2bfe7",
+        "yellow": "#9accfa",
         "red": "#ffb4ab"
       }
     }

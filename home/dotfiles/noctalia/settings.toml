@@ -445,7 +445,7 @@ builtin = "Tokyo-Night"
 community_palette = "Catppuccin Mocha Pink"
 mode = "dark"
 source = "wallpaper"
-wallpaper_scheme = "m3-content"
+wallpaper_scheme = "m3-tonal-spot"
 
     [theme.templates]
     builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "ghostty", "niri", "qt" ]
@@ -470,16 +470,16 @@ directory = "/home/jonathan/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/jonathan/Pictures/Wallpapers/Columbia.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/hush-val.png"
 
     [wallpaper.last]
-    path = "/home/jonathan/Pictures/Wallpapers/Columbia.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/hush-val.png"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/jonathan/Pictures/Wallpapers/Columbia.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/hush-val.png"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/jonathan/Pictures/Wallpapers/Columbia.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/hush-val.png"
 
 [widget.audio_visualizer]
 bands = 10

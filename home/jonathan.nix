@@ -61,7 +61,6 @@ in
     ripgrep
     fd
     spicetify-cli
-    yazi
     tree
     tealdeer
     unzip
@@ -108,6 +107,7 @@ in
     telegram-desktop
     vesktop
     keepassxc
+    imv
     qbittorrent
     ani-cli
     pavucontrol
@@ -157,12 +157,15 @@ in
       rebuild = "nh os switch";
       update = "nh os switch --update";
     };
+
     initContent = ''
       add_newline() { print ""; print ""; print "" }
       precmd_functions+=(add_newline)
       # Noctalia-generated fzf colours (rewritten whenever the palette changes)
       [ -f "$HOME/.config/fzf/themes/noctalia.sh" ] && source "$HOME/.config/fzf/themes/noctalia.sh"
       [ -t 1 ] && ${lib.getExe pkgs.fastfetch}
+      # Default editor
+      export EDITOR="nvim"
     '';
   };
 
@@ -301,6 +304,46 @@ in
         callback = function() pcall(vim.treesitter.start) end,
       })
     '';
+  };
+
+  programs.yazi = {
+    enable = true;
+    settings = {
+      opener = {
+        #Image viewe
+        img = [
+          {
+            run = ''imv "$@" '';
+            orpan = true;
+            desc = "imv";
+            for = "unix";
+          }
+        ];
+        #Video Player
+        video = [
+          {
+            run = ''mpv "$@"'';
+            orphan = true;
+            desc = "mpv";
+            for = "unix";
+          }
+        ];
+      };
+
+      open = {
+        # Use 'prepend_rules' so custom apps take over xdg-open
+        prpend_rules = [
+          {
+            mime = "image/*";
+            use = "image";
+          }
+          {
+            mime = "video/&";
+            use = "video";
+          }
+        ];
+      };
+    };
   };
 
   # Prompt. No `settings` here on purpose: HM would make starship.toml read-only,

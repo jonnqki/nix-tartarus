@@ -443,7 +443,7 @@ screen_time_enabled = true
 [theme]
 builtin = "Tokyo-Night"
 community_palette = "Catppuccin Mocha Pink"
-mode = "dark"
+mode = "auto"
 source = "wallpaper"
 wallpaper_scheme = "m3-tonal-spot"
 
@@ -470,16 +470,16 @@ directory = "/home/jonathan/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/jonathan/Pictures/Wallpapers/hush-val.png"
+    path = "/home/jonathan/Pictures/Wallpapers/wallhaven-rdeer1.jpg"
 
     [wallpaper.last]
-    path = "/home/jonathan/Pictures/Wallpapers/hush-val.png"
+    path = "/home/jonathan/Pictures/Wallpapers/wallhaven-rdeer1.jpg"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/jonathan/Pictures/Wallpapers/hush-val.png"
+    path = "/home/jonathan/Pictures/Wallpapers/wallhaven-rdeer1.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/jonathan/Pictures/Wallpapers/hush-val.png"
+    path = "/home/jonathan/Pictures/Wallpapers/wallhaven-rdeer1.jpg"
 
 [widget.audio_visualizer]
 bands = 10
@@ -525,7 +525,9 @@ label_min_width = 16
 scale = 0.65000000000000002
 
 [widget.tray]
+detached_panel = true
 drawer = true
+drawer_columns = 4
 drawer_item_size = 14.0
 scale = 0.65000000000000002
 

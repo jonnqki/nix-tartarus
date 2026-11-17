@@ -252,7 +252,7 @@ spawn-at-startup "noctalia"
 
 //Start up apps
 spawn-at-startup "vesktop" "--start-minimized"
-spawn-at-startup "keepassxc"
+spawn-at-startup "keepassxc" "--start-minimized"
 spawn-at-startup "zen-beta"
 
 
@@ -307,7 +307,7 @@ animations {
     // off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-    slowdown 2
+    slowdown 1
 
 }
 
@@ -326,13 +326,13 @@ window-rule {
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
-window-rule {
+// window-rule {
     // This app-id regular expression will work for both:
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    open-floating true
-}
+//    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+//    open-floating true
+//}
 
 
 window-rule {
@@ -401,11 +401,6 @@ window-rule {
 
 }
 
-layer-rule {
-    match namespace="fuzzel"
-    opacity 0.95
-}
-
 overview {
     zoom 0.34
     backdrop-color "#000000"
@@ -433,7 +428,7 @@ binds {
     // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+Alt+F11 hotkey-overlay-title="Save OBS Replay" {
-        spawn "obs-cmd" "--websocket" "obsws://localhost:4455/8ZmVVMDbPpOkNFdU" "replay" "save";
+        spawn "obs-cmd" "--websocket" "obsws://localhost:4455/L0z9DPXtMYVf80bp" "replay" "save";
     }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
@@ -658,7 +653,7 @@ binds {
     Mod+Shift+Equal { set-window-height "+10%"; }
 
     // Move the focused window between the floating and the tiling layout.
-    Mod+V       { toggle-window-floating; }
+    Mod+Space      { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 
     // Toggle tabbed column display mode.
@@ -671,8 +666,7 @@ binds {
     // a matching layout switch hotkey configured in xkb options above.
     // Having both at once on the same hotkey will break the switching,
     // since it will switch twice upon pressing the hotkey (once by xkb, once by niri).
-    Mod+Space       { switch-layout "next"; }
-    Mod+Shift+Space { switch-layout "prev"; }
+    Mod+Shift+Space { switch-layout "next"; }
 
     Mod+Shift+S hotkey-overlay-title="Screenshot Region: Noctalia" { spawn "noctalia" "msg" "screenshot-region"; }
     Ctrl+Shift+S hotkey-overlay-title="Screenshot Screen: Noctalia" { spawn "noctalia" "msg" "screenshot-fullscreen"; }

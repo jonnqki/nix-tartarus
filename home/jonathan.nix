@@ -55,6 +55,8 @@ in
     "$HOME/.spicetify"
   ];
 
+  home.sessionVariables.EDITOR = "nvim";
+
   home.packages = with pkgs; [
 
     #CLI based & system tools
@@ -141,6 +143,8 @@ in
       size = 50000;
       save = 50000;
       ignoreAllDups = true;
+      extended = true;
+      ignoreSpace = true;
     };
     oh-my-zsh = {
       enable = true;
@@ -151,7 +155,19 @@ in
         "history"
       ];
     };
+
+    plugins = [
+      {
+        name = "fzf-tab";
+        src = pkgs.zsh-fzf-tab;
+        file = "share/fzf-tab/fzf-tab.plugin.zsh";
+
+      }
+    ];
     shellAliases = {
+      cat = "bat";
+      cleanup = "nh clean all --keep 5";
+      gens = "nixos-rebuild list-generations";
       clipsls = "ls -la /mnt/backup/clips /mnt/backup/clips/converted";
       list = "ls -al";
       rebuild = "nh os switch";
@@ -159,13 +175,14 @@ in
     };
 
     initContent = ''
+      setopt AUTO_CD # Type dir name, CD into it
+      setopt INTERACTIVE_COMMENTS #allow # comments
       add_newline() { print ""; print ""; print "" }
       precmd_functions+=(add_newline)
       # Noctalia-generated fzf colours (rewritten whenever the palette changes)
       [ -f "$HOME/.config/fzf/themes/noctalia.sh" ] && source "$HOME/.config/fzf/themes/noctalia.sh"
       [ -t 1 ] && ${lib.getExe pkgs.fastfetch}
       # Default editor
-      export EDITOR="nvim"
     '';
   };
 

@@ -443,9 +443,9 @@ screen_time_enabled = true
 [theme]
 builtin = "Tokyo-Night"
 community_palette = "Catppuccin Mocha Pink"
-mode = "auto"
+mode = "dark"
 source = "wallpaper"
-wallpaper_scheme = "m3-tonal-spot"
+wallpaper_scheme = "vibrant"
 
     [theme.templates]
     builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "ghostty", "niri", "qt" ]
@@ -470,16 +470,16 @@ directory = "/home/jonathan/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/jonathan/Pictures/Wallpapers/wallhaven-rdeer1.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/wallhaven-p9pzk9.png"
 
     [wallpaper.last]
-    path = "/home/jonathan/Pictures/Wallpapers/wallhaven-rdeer1.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/wallhaven-p9pzk9.png"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/jonathan/Pictures/Wallpapers/wallhaven-rdeer1.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/wallhaven-p9pzk9.png"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/jonathan/Pictures/Wallpapers/wallhaven-rdeer1.jpg"
+    path = "/home/jonathan/Pictures/Wallpapers/wallhaven-p9pzk9.png"
 
 [widget.audio_visualizer]
 bands = 10

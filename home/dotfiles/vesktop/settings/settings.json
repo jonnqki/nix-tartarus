@@ -493,7 +493,7 @@
             "enabled": false
         },
         "Translate": {
-            "enabled": false
+            "enabled": true
         },
         "TypingIndicator": {
             "enabled": false
@@ -571,7 +571,8 @@
         },
         "NoTrack": {
             "enabled": true,
-            "disableAnalytics": true
+            "disableAnalytics": true,
+            "allowBadgeTracking": true
         },
         "Settings": {
             "enabled": true,
@@ -620,6 +621,9 @@
         },
         "MutedServersActivityBadge": {
             "enabled": false
+        },
+        "FixDiscordCss": {
+            "enabled": true
         }
     },
     "uiElements": {
@@ -636,7 +640,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1794390328542
+        "settingsSyncVersion": 1794867991705
     },
     "nativeTitleBar": false
 }

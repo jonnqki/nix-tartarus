@@ -1,5 +1,4 @@
-![alt text](.github/nixos.svg)
-
+![NixOS](https://raw.githubusercontent.com/NixOS/nixos-artwork/master/logo/nix-snowflake-colours.svg)
 
 
 Hello this is my file configuation for nixos which is my daily driver when it comes linux, everything you need to know is in here.

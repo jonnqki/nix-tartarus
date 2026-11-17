@@ -1,4 +1,4 @@
-![alt text](Assets/nixos.svg)
+![alt text](.github/nixos.svg)
 
 
 

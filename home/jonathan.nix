@@ -79,6 +79,10 @@ in
     nmap
     hyprpicker
     wl-clipboard
+    globe-cli
+    hollywood
+    pokemon-colorscripts
+    neo
     playerctl
     yt-dlp
     ffmpeg
@@ -113,6 +117,10 @@ in
     qbittorrent
     ani-cli
     pavucontrol
+
+    # Virtualisation
+    vm-curator
+    qemu-utils
   ];
 
   # ======================================================== (A) ==================================================
@@ -254,7 +262,7 @@ in
 
   programs.gh.enable = true; # GitHub CLI
 
-  ##use native spotify and not flatpak, this is for noctailia theming
+  # use native spotify and not nixpkgs, this is for noctailia theming
   ###programs.spicetify =
   #let
   #  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};

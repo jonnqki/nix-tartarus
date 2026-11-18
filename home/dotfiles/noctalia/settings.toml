@@ -158,6 +158,7 @@ widget_order = [ "desktop-widget-0000000000000001", "desktop-widget-000000000000
 
 [dock]
 active_monitor_only = true
+enabled = false
 smart_auto_hide = true
 
 [idle]

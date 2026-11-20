@@ -120,6 +120,9 @@ in
 
     # Virtualisation
     vm-curator
+    virt-viewer
+    swtpm
+    passt
     qemu-utils
   ];
 

@@ -7,6 +7,7 @@
     ./nix.nix
     ./nh.nix
     ./mouse.nix
+    ./keyboard.nix
     ./locale.nix
     ./networking.nix
     ./desktop.nix

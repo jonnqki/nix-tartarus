@@ -6,6 +6,7 @@
   imports = [
     ./nix.nix
     ./nh.nix
+    ./mouse.nix
     ./locale.nix
     ./networking.nix
     ./desktop.nix

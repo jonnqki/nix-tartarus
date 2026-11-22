@@ -38,11 +38,30 @@ let
     rev = "9ad9158a93c0de0c045e1c6b27df37da698bc8af";
     hash = "sha256-TnoQvptwjs6P5/JfJO1CR3yhCfCcaw5wvPr5oEhn4Ho=";
   };
+
+  # CraftPlugins (MIT): prebuilt WASM effect plug-ins for EffectCraft, shipped in dist/.
+  craft-plugins = pkgs.fetchFromGitHub {
+    owner = "qwertyonek";
+    repo = "craft-plugins";
+    rev = "c50a4b51e58dbfac3aa0a9cfd945d023aeb011e6";
+    hash = "sha256-ldJNdzAfeZevrPzGFGXK6NqfgsT8Ld/Dpa92Mch6sMM=";
+  };
 in
 {
   imports = [
     inputs.spicetify-nix.homeManagerModules.default
     inputs.nix-index-database.homeModules.nix-index
+
+    # ============== (B) EffectCraft plug-ins: one symlink per .wasm in craft-plugins/dist =========
+    # Linked file by file (not the whole dir) because EffectCraft writes its own
+    # Plug-ins/Library folder, so the folder itself must stay writable. Inline module
+    # because xdg.configFile is already set as a literal elsewhere in this file.
+    {
+      xdg.configFile = lib.mapAttrs' (name: _: {
+        name = "effectcraft/Plug-ins/${name}";
+        value.source = "${craft-plugins}/dist/${name}";
+      }) (lib.filterAttrs (n: _: lib.hasSuffix ".wasm" n) (builtins.readDir "${craft-plugins}/dist"));
+    }
   ];
 
   home.username = "jonathan";

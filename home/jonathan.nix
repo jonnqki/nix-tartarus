@@ -64,6 +64,7 @@ in
     fd
     spicetify-cli
     tree
+    imagemagick
     tealdeer
     unzip
     fastfetch

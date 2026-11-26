@@ -1,8 +1,6 @@
 { ... }:
 
 {
-  hardware.logitech.wireless = {
-    enable = true;
-    enableGraphical = true;
-  };
+  # Solaar GUI for Logitech devices
+  programs.solaar.enable = true;
 }

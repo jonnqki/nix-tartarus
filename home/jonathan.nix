@@ -81,8 +81,10 @@ in
     #CLI based & system tools
     ripgrep
     fd
+    nix-tree
     spicetify-cli
     tree
+    fetch
     imagemagick
     tealdeer
     unzip
@@ -126,13 +128,16 @@ in
     orca
     dconf
     glib
+    gpu-screen-recorder
     ghostty
     nautilus
 
     # Applications
     telegram-desktop
+    nvtopPackages.nvidia
     vesktop
     keepassxc
+    obsidian
     imv
     qbittorrent
     ani-cli

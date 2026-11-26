@@ -50,6 +50,8 @@ in
       prismlauncher
       r2modman
       protonup-qt
+      mangohud
+      goverlay
       wine-wayland
       winetricks
       # nixpkgs' cargo hook forces AWS_LC_SYS_USE_SYSTEM=1, but the package

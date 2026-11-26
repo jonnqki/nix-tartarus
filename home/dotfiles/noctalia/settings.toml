@@ -446,7 +446,7 @@ builtin = "Tokyo-Night"
 community_palette = "Catppuccin Mocha Pink"
 mode = "dark"
 source = "wallpaper"
-wallpaper_scheme = "soft"
+wallpaper_scheme = "m3-content"
 
     [theme.templates]
     builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "ghostty", "niri", "qt" ]
@@ -471,16 +471,16 @@ directory = "/home/jonathan/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/jonathan/Pictures/Wallpapers/nix_fem.png"
+    path = "/home/jonathan/Pictures/Wallpapers/wallhaven-7jxz5e.jpg"
 
     [wallpaper.last]
-    path = "/home/jonathan/Pictures/Wallpapers/nix_fem.png"
+    path = "/home/jonathan/Pictures/Wallpapers/wallhaven-7jxz5e.jpg"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/jonathan/Pictures/Wallpapers/nix_fem.png"
+    path = "/home/jonathan/Pictures/Wallpapers/wallhaven-7jxz5e.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/jonathan/Pictures/Wallpapers/nix_fem.png"
+    path = "/home/jonathan/Pictures/Wallpapers/wallhaven-7jxz5e.jpg"
 
 [widget.audio_visualizer]
 bands = 10
